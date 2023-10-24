@@ -2,8 +2,8 @@ import { createContext,useReducer } from "react";
 
 const CartContext = createContext({
  item : [],
- addItem : (item) =>{}
- removeItem : (id) =>{}
+ addItem : (item) =>{},
+ removeItem: (id) =>{}
 });
 
 function CartReducer(state,action) {
@@ -27,7 +27,7 @@ else{
     updatedItems.push({...action.item,quantity: 1 });
 }
 
-return {...state , items = updatedItems}
+return {...state , items : updatedItems}
     }
     if(action.type  === 'REMOVE_ITEM'){
         const existingCartItemIndex = state.items.findIndex(
@@ -44,7 +44,7 @@ return {...state , items = updatedItems}
             }
             updatedItems[existingCartItemIndex]=updatedItem;
         }
-        return {...state , items = updatedItems}
+        return {...state , items : updatedItems}
     }
 
     return state;
