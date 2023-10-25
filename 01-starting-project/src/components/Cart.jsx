@@ -21,6 +21,10 @@ export default function Cart() {
     UserProgressCtx.hideCart();
   }
 
+  function handleCloseCheckout() {
+    UserProgressCtx.hideCheckout();
+  }
+
   return (
     <Modal className="cart" open={UserProgressCtx.progress === "cart"}>
       <h2>Your Cart</h2>
@@ -37,7 +41,7 @@ export default function Cart() {
       </ul>
       <p className="cart-total">{currencyFormatter.format(cartTotal)}</p>
       <Button textOnly={true} onClick={handleCloseCart}>Close</Button>
-      <Button>Go To Checkout</Button>
+      {CartCtx.items.length > 0 && <Button onClick={handleCloseCheckout} >Go To Checkout</Button>}
     </Modal>
   );
 }
