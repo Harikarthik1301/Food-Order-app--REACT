@@ -226,12 +226,12 @@ h1 {
   cursor: pointer;
   background-color: transparent;
   border: none;
-  color: #ffc404;
+  color: #0f0f0f;
 }
 
 .text-button:hover,
 .text-button:active {
-  color: #ffab04;
+  color: #9c6c0d;
 }
 
 .modal {
