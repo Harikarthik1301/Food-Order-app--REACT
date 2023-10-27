@@ -249,6 +249,36 @@ h1 {
   background-color: rgba(0, 0, 0, 0.55);
 }
 
+.center{
+  align-items: center;
+  text-align: center;
+}
+
+.error {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #a84343;
+  border: 1px solid #c03434;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  border-radius: 5px;
+  max-width: 400px;
+  text-align: center;
+  z-index: 1000; /* Ensure it's above other content */
+}
+
+.error h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.error p {
+  font-size: 16px;
+  color: #000000;
+}
+
 @keyframes fade-slide-up {
   from {
     opacity: 0;
